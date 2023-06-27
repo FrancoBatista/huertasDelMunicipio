@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Municipio de Río Grande - División de Productores Agrícolas</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 70px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .navbar {
+            background-color: #f8f9fa;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .testimonial {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .testimonial-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">Municipio de Río Grande</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Ingresar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/registrar">Registrarse</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="container">
+        <h1>Bienvenido al Municipio de Río Grande - División de Productores Agrícolas</h1>
+        <div id="carouselExample" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img th:src="@{../assets/vivero2.jpg}" class="d-block w-100" alt="imagen 1">
+                </div>
+                <div class="carousel-item">
+                    <img th:src="@{../templates/descarga.jpg}" class="d-block w-100" alt="imagen 2">
+                </div>
+                <div class="carousel-item">
+                    <img th:src="@{../assets/vivero3.jpg}" class="d-block w-100" alt="imagen 3">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+            </a>
+        </div>
+
+        <div class="container">
+            <div class="testimonial">
+                <img src="../assets/avatar1.jpg" class="testimonial-avatar" alt="Avatar">
+                <p class="testimonial-text">"Las huertas municipales son una gran iniciativa para promover la agricultura local y el consumo de alimentos saludables. ¡Me encanta ser parte de este proyecto!"</p>
+                <p class="testimonial-author">- Juan Pérez</p>
+            </div>
+
+            <div class="testimonial">
+                <img src="../assets/avatar2.jpg" class="testimonial-avatar" alt="Avatar">
+                <p class="testimonial-text">"La experiencia en las huertas municipales ha sido gratificante. He aprendido mucho sobre cultivo sostenible y disfruto cosechando mis propias verduras."</p>
+                <p class="testimonial-author">- María López</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Municipio de Río Grande - División de Productores Agrícolas</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

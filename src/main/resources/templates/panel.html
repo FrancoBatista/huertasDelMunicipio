@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head th:replace= "/fragments/head :: head "</head> 
+<body>
+    <nav th:replace="/fragments/navbar :: nav"></nav>
+
+    <!-- Contenido principal -->
+    <div class="container">
+          <p th:if="${session.usuariosession != null}" th:text="'Hola, ' + ${session.usuariosession.nombre} + ' Bienvenido a tu panel de control.'"></p>
+        <h1>Bienvenido al Municipio de Río Grande - División de Productores Agrícolas</h1>
+        
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Municipio de Río Grande - División de Productores Agrícolas</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

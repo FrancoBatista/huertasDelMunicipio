@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <head th:replace= "/fragments/head :: head "</head> 
+    <body>
+
+        <nav th:replace="/fragments/navbar :: nav"></nav>
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form class="formulario" th:action="@{/logincheck}" method="POST">
+                        <div class="form-group text-center">
+                            <h3 class="card-title">Accede a nuestra página</h3>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" placeholder="Correo electrónico">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="password" placeholder="Contraseña">
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary botones">Ingresar</button>
+                        </div>
+                    </form>
+                    <!-- Botón Volver -->
+                    <div class="form-group">
+                        <a th:href="@{/}" class="btn btn-secondary botonVolver">Volver</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container">
+                <p class="mb-1">Huertas Municipales - Todos los derechos reservados &copy; 2023</p>
+                <p class="mb-0">Sitio web desarrollado por <a href="#">Franco Sebastiam Batista</a></p>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    </body>
+</html>
